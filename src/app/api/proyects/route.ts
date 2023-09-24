@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import Proyectos from '../../../components/Proyectos';
+
 export async function GET() {
 	try {
 		const res = await fetch('https://api.vercel.com/v9/projects', {
 			headers: {
-				Authorization: `Bearer K5M4QOsuLzJRya2F8mPHJjn4`,
+				Authorization: `Bearer ${process.env.VERCEL_TOKEN}`,
 			},
 			method: 'GET',
 		});
