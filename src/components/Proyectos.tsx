@@ -88,16 +88,6 @@ function Proyectos() {
 					</div>
 				</div>
 			</div>
-			{/* <div className="bg-white bg-opacity-20 border-t-4 border-l-4  rounded-3xl p-6 md:p-10 lg:p-20 lg:mt-20 mt-10 mb-20">
-        <img className="mx-auto mb-6" src="/photo1.png" alt="" />
-        <p className=" lg:max-w-960 lg:mx-auto sm:text-center md:text-2xl  lg:text-34px lg:leading-normal mb-5 text-textColor text-base leading-6 font-body font-bold">
-          "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem
-          ipsum lorem ipsum lorem ipsum".
-        </p>
-        <p className="text-textColor opacity-50 text-xs leading-6 font-body font-normal lg:text-2xl sm:text-center lg:font-bold">
-          LEONIDAS ESTEBAN / COFUNDADOR Y CEO LEONIDASESTEBAN.COM
-        </p>
-      </div> */}
 			<div className="lg:flex-row lg:justify-between lg:pb-20 pb-10 flex justify-center flex-col items-center ">
 				<img
 					src="/blockbuuster.png"
@@ -169,7 +159,7 @@ function Proyectos() {
 					</div>
 				</div>
 			</div>
-			{/* <MasProyectos /> */}
+			<MasProyectos />
 		</div>
 	);
 }

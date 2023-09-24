@@ -26,7 +26,7 @@ const config: Config = {
 					'rgba(182, 209, 236, 0.4) -5px 5px, rgba(182, 209, 236, 0.3) -10px 10px, rgba(182, 209, 236, 0.2) -15px 15px, rgba(182, 209, 236, 0.1) -20px 20px, rgba(182, 209, 236, 0.05) -25px 25px',
 			},
 			fontFamily: {
-				body: ['Oxygen'],
+				body: ['Oxygen', 'sans-serif'],
 			},
 			maxWidth: {
 				960: '960px',

@@ -1,36 +1,33 @@
-'use client';
+import { type } from 'os';
+import { GET } from '../app/api/proyects/route';
 
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
-const MasProyectos = () => {
-	const [proyectos, setProyectos] = useState([]);
-	const [axu, setAxu] = useState([]);
-	const [mostrar, setMostrar] = useState(false);
-
-	const lessProjects = () => {
-		setProyectos(axu.slice(0, 6));
-		setMostrar(false);
+type Proyects = {
+	name: string;
+	updatedAt: string;
+	targets: {
+		production: {
+			alias: string[];
+			meta: {
+				githubCommitMessage: string;
+			};
+		};
 	};
-	const moreProjects = () => {
-		setProyectos(axu);
-		setMostrar(true);
+	link: {
+		repo: string;
 	};
+};
 
-	useEffect(async () => {
-		await axios
-			.get('https://api.vercel.com/v9/projects', {
-				headers: {
-					Authorization: `Bearer ${process.env.GETPROYECT}`,
-				},
-			})
-			.then((res) => {
-				setAxu(res.data.projects);
-				setProyectos(res.data.projects.slice(0, 6));
-			});
+const MasProyectos = async () => {
+	const proyectos = await GET();
 
-		console.log('proyectos');
-	}, []);
+	// const lessProjects = () => {
+	// 	setProyectos(axu.slice(0, 6));
+	// 	setMostrar(false);
+	// };
+	// const moreProjects = () => {
+	// 	setProyectos(axu);
+	// 	setMostrar(true);
+	// };
 
 	return (
 		<div data-aos="fade-right" className="w-full">
@@ -39,13 +36,13 @@ const MasProyectos = () => {
 			</h1>
 			<div className="w-full">
 				<div className="flex justify-center gap-5 items-center   flex-wrap pb-5 transform transition-opacity ">
-					{proyectos.length > 0 ? (
-						proyectos?.map((project) => (
+					{proyectos.projects.length > 0 ? (
+						proyectos.projects?.map((project: Proyects) => (
 							<div
 								data-aos="fade-up"
 								data-aos-delay="300"
 								key={project.name}
-								className="w-80 transform transition-all rounded-lg border-2 text-gray-200 shadow-md bg-white bg-opacity-20  border-white border-opacity-20"
+								className="w-64 h-64 flex flex-col items-start justify-center transform transition-all rounded-lg border-2 text-gray-200 shadow-md bg-white bg-opacity-20  border-white border-opacity-20"
 							>
 								<div className="p-5">
 									<a
@@ -62,9 +59,9 @@ const MasProyectos = () => {
 											<p className="text-gray-400">{'updated'.toUpperCase()}</p>
 											<span>{new Date(project.updatedAt).toDateString()}</span>
 										</div>
-										<div>
+										<div className="overflow-hidden w-full">
 											<p className="text-gray-400">{'Commit'.toUpperCase()}</p>
-											<span>
+											<span className="">
 												{project.targets.production.meta.githubCommitMessage}
 											</span>
 										</div>
@@ -121,7 +118,7 @@ const MasProyectos = () => {
 					)}
 				</div>
 			</div>
-			<div className="flex justify-center pt-10">
+			{/* <div className="flex justify-center pt-10">
 				{!mostrar ? (
 					<button
 						onClick={moreProjects}
@@ -137,7 +134,7 @@ const MasProyectos = () => {
 						Ver menos proyectos
 					</button>
 				)}
-			</div>
+			</div> */}
 		</div>
 	);
 };
