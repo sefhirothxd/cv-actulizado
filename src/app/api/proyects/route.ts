@@ -1,12 +1,27 @@
 import { NextResponse } from 'next/server';
-import axios from 'axios';
+import Proyectos from '../../../components/Proyectos';
 export async function GET() {
-	const res = await axios.get('https://api.vercel.com/v9/projects', {
-		headers: {
-			Authorization: `Bearer K5M4QOsuLzJRya2F8mPHJjn4`,
-		},
-	});
-	const data = await res.data;
+	try {
+		const res = await fetch('https://api.vercel.com/v9/projects', {
+			headers: {
+				Authorization: `Bearer K5M4QOsuLzJRya2F8mPHJjn4`,
+			},
+			method: 'GET',
+		});
+		const data = await res.json();
 
-	return data;
+		return NextResponse.json(
+			{
+				proyectos: data.projects,
+			},
+			{ status: 200 }
+		);
+	} catch (error) {
+		return NextResponse.json(
+			{
+				message: 'Error',
+			},
+			{ status: 500 }
+		);
+	}
 }

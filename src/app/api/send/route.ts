@@ -1,7 +1,6 @@
 import { Resend } from 'resend';
 import { EmailTemplate } from '@/components/EmailTemplate';
 import { NextResponse } from 'next/server';
-import { type } from 'os';
 
 const resend = new Resend('re_dCEBKPPE_KoQipwRN1FNp3JBS2NNth9ZM');
 
@@ -24,7 +23,7 @@ export async function POST(request: Request) {
 			react: EmailTemplate({ firstName: name, correo, message }),
 			text: '',
 		});
-		console.log(data);
+
 		return NextResponse.json(
 			{
 				message: 'Email sent',

@@ -1,5 +1,5 @@
-import { type } from 'os';
-import { GET } from '../app/api/proyects/route';
+'use client';
+import { useEffect, useState } from 'react';
 
 type Proyects = {
 	name: string;
@@ -17,9 +17,20 @@ type Proyects = {
 	};
 };
 
-const MasProyectos = async () => {
-	const proyectos = await GET();
+const MasProyectos = () => {
+	const [proyectos, setProyectos] = useState<Proyects[]>([]);
+	const getProyect = async () => {
+		const res = await fetch('/api/proyects', {
+			method: 'GET',
+		});
+		const data = await res.json();
+		const axu = data.proyectos;
+		setProyectos(axu);
+	};
 
+	useEffect(() => {
+		getProyect();
+	}, []);
 	// const lessProjects = () => {
 	// 	setProyectos(axu.slice(0, 6));
 	// 	setMostrar(false);
@@ -36,8 +47,8 @@ const MasProyectos = async () => {
 			</h1>
 			<div className="w-full">
 				<div className="flex justify-center gap-5 items-center   flex-wrap pb-5 transform transition-opacity ">
-					{proyectos.projects.length > 0 ? (
-						proyectos.projects?.map((project: Proyects) => (
+					{proyectos?.length > 0 ? (
+						proyectos?.map((project: any) => (
 							<div
 								data-aos="fade-up"
 								data-aos-delay="300"
