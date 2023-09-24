@@ -11,7 +11,7 @@ type EmailType = {
 	message: string;
 };
 
-export async function POST(request: { json: () => Promise<EmailType> }) {
+export async function POST(request: Request) {
 	const { name, correo, message } = await request.json();
 
 	console.log(name, correo, message);
