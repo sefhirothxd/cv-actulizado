@@ -6,7 +6,10 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-12 max-w-7xl mx-auto">
+    <main
+      className="min-h-screen md:px-12 px-[10px]  max-w-7xl mx-auto"
+      id="main"
+    >
       <Header />
       <Presentacion />
       <Proyectos />

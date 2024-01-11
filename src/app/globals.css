@@ -9,14 +9,11 @@
 	--color-gray-950: oklch(0 0 20);
 }
 
-/* body {
-	min-height: 100vh;
-	background: linear-gradient(-45deg, var(--color-black), var(--color-gray-950));
-	background-size: 500% 500%;
-	animation: bg 3s ease infinite;
+body {
+	scroll-behavior: smooth;
 }
 
-@keyframes bg {
+/* @keyframes bg {
 	0%, 100% {
 		background-position: 0 50%;
 	}

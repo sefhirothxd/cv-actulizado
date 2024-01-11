@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="pb-6 lg:flex lg:flex-row-reverse lg:justify-between lg:gap-10 xl:gap-28 lg:items-center">
@@ -32,15 +35,22 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-center lg:flex xl:pl-16">
-        <p className="text-textColor lg:mr-4 text-base font-body font-normal mb-2">
+        {/* <p className="text-textColor lg:mr-4 text-base font-body font-normal mb-2">
           Hecho por Bryan Vera
-        </p>
+        </p> */}
         <p className="text-textColor text-base font-body tex font-normal">
           Copyright 2021 - Todos los derechos reservados.
         </p>
       </div>
       <div className="hidden lg:block">
-        <h1 className="font-black text-white text-3xl">LOGO</h1>
+        <Link href={"#main"}>
+          <Image
+            src="/rm-logo2.png"
+            width={100}
+            height={100}
+            alt="Logo bryan vera"
+          />
+        </Link>
       </div>
     </div>
   );
