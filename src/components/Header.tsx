@@ -17,7 +17,7 @@ function Header() {
 					</li>
 				</ul>
 			</nav>
-			<div className="bg-greenLight font-bold py-3 px-6  border-white border-solid rounded-full border-2 shadow-caja">
+			<div className="bg-white font-bold py-3 px-6  border-gray-950 text-gray-950 border-solid rounded-full border-2 shadow-caja">
 				<a href="CV-BryanVera.pdf" className="lg:hidden" target="_blank">
 					CURRÍCULIM
 				</a>

@@ -26,7 +26,7 @@ function Proyectos() {
 				/>
 				<div data-aos="fade-left" className="lg:pb-20">
 					<article className="mb-5 max-w-md">
-						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-greenLight  px-2 text-black text-2xl">
+						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-white  px-2 text-gray-950 text-2xl">
 							Golden envios
 						</h3>
 						<p className="text-textColor text-base leading-6 font-body font-normal lg:pr-4">
@@ -37,7 +37,7 @@ function Proyectos() {
 						<a
 							target="_blank"
 							href="https://github.com/sefhirothxd/golden-envios"
-							className="flex mb-4 text-textColor lg:mb-0 lg:w-30 items-center justify-center font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+							className="flex mb-4 text-white lg:mb-0 lg:w-30 items-center justify-center font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
 						>
 							<img className="inline mr-2" src="/icon-github.svg" />
 							VER CÓDIGO
@@ -45,7 +45,7 @@ function Proyectos() {
 						<a
 							target="_blank"
 							href="https://golden-envios.vercel.app/"
-							className="bg-greenLight lg:mr-3 lg:w-30 font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+							className="bg-white lg:mr-3 lg:w-30 font-body text-[14px] flex items-center justify-center  text-gray-950 font-bold border-textColor border-2 rounded-full w-full py-3"
 						>
 							VER PROYECTO
 						</a>
@@ -61,7 +61,7 @@ function Proyectos() {
 				/>
 				<div data-aos="fade-right" className="lg:pb-20">
 					<article className="mb-5 max-w-md">
-						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-greenLight  px-2 text-black text-2xl">
+						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-white  px-2 text-gray-950 text-2xl">
 							Musicfy
 						</h3>
 						<p className="text-textColor text-base leading-6 font-body font-normal lg:pr-4">
@@ -73,7 +73,7 @@ function Proyectos() {
 						<a
 							target="_blank"
 							href="https://github.com/sefhirothxd/reproductodeaudio-vue"
-							className="flex mb-4 text-textColor lg:mb-0 lg:w-30 items-center justify-center font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+							className="flex mb-4 text-white lg:mb-0 lg:w-30 items-center justify-center font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
 						>
 							<img className="inline mr-2" src="/icon-github.svg" />
 							VER CÓDIGO
@@ -81,7 +81,7 @@ function Proyectos() {
 						<a
 							target="_blank"
 							href="https://cancionesapicors.netlify.app/"
-							className="bg-greenLight lg:mr-3 lg:w-30 font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+							className="bg-white lg:mr-3 lg:w-30 font-body text-[14px] flex items-center justify-center  text-gray-950 font-bold border-textColor border-2 rounded-full w-full py-3"
 						>
 							VER PROYECTO
 						</a>
@@ -97,7 +97,7 @@ function Proyectos() {
 				/>
 				<div data-aos="fade-left" className="lg:pb-20">
 					<article className="mb-5 max-w-md">
-						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-greenLight  px-2 text-black text-2xl">
+						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-white  px-2 text-black text-2xl">
 							Block Buster
 						</h3>
 						<p className="text-textColor text-base leading-6 font-body font-normal lg:pr-4">
@@ -117,7 +117,7 @@ function Proyectos() {
 						<a
 							target="_blank"
 							href="https://blockbuster-two.vercel.app/"
-							className="bg-greenLight lg:mr-3 lg:w-30 font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+							className="bg-white lg:mr-3 lg:w-30 font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
 						>
 							VER PROYECTO
 						</a>
@@ -133,7 +133,7 @@ function Proyectos() {
 				/>
 				<div data-aos="fade-right" className="lg:pb-20">
 					<article className="mb-5 max-w-md">
-						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-greenLight  px-2 text-black text-2xl">
+						<h3 className="shadow-showTitle py-4 lg:text-34px mb-5 inline-block bg-white  px-2 text-black text-2xl">
 							KITO PERU
 						</h3>
 						<p className="text-textColor text-base leading-6 font-body font-normal lg:pr-4">
@@ -152,7 +152,7 @@ function Proyectos() {
 						<a
 							target="_blank"
 							href="https://kitoperu.vercel.app/"
-							className="bg-greenLight lg:mr-3 lg:w-30 font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+							className="bg-white lg:mr-3 lg:w-30 font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
 						>
 							VER PROYECTO
 						</a>

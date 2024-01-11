@@ -24,7 +24,9 @@ const MasProyectos = () => {
 			method: 'GET',
 		});
 		const data = await res.json();
-		const axu = data.proyectos;
+		console.log(data);
+		const axu = data.data.projects;
+		console.log(axu);
 		setProyectos(axu);
 	};
 
@@ -42,8 +44,8 @@ const MasProyectos = () => {
 
 	return (
 		<div data-aos="fade-right" className="w-full">
-			<h1 className="shadow-showTitle text-center py-4 lg:text-34px mb-16 w-1/2 mx-auto bg-greenLight  px-2 text-black text-2xl">
-				Otros proyectos destacados
+			<h1 className="shadow-showTitle text-center py-4 lg:text-34px mb-16 w-1/2 mx-auto bg-white  px-2 text-gray-950 text-2xl">
+				{'Otros proyectos destacados'.toUpperCase()}
 			</h1>
 			<div className="w-full">
 				<div className="flex justify-center gap-5 items-center   flex-wrap pb-5 transform transition-opacity ">
@@ -133,14 +135,14 @@ const MasProyectos = () => {
 				{!mostrar ? (
 					<button
 						onClick={moreProjects}
-						className="bg-greenLight lg:mr-3 font-body text-lg font-bold border-textColor border-2 rounded-xl w-56  py-3"
+						className="bg-white lg:mr-3 font-body text-lg font-bold border-textColor border-2 rounded-xl w-56  py-3"
 					>
 						Ver más los proyectos
 					</button>
 				) : (
 					<button
 						onClick={lessProjects}
-						className="bg-greenLight lg:mr-3 font-body text-lg font-bold border-textColor border-2 rounded-xl w-56  py-3"
+						className="bg-white lg:mr-3 font-body text-lg font-bold border-textColor border-2 rounded-xl w-56  py-3"
 					>
 						Ver menos proyectos
 					</button>

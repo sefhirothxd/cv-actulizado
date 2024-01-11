@@ -99,7 +99,7 @@ const FormContacto = () => {
 			)}
 			<button
 				type="submit"
-				className="bg-greenLight font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
+				className="bg-white font-body text-14px font-bold border-textColor border-2 rounded-full w-full py-3"
 			>
 				ENVIAR MENSAJE
 			</button>

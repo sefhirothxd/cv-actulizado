@@ -4,7 +4,7 @@ export async function GET() {
 	try {
 		const res = await fetch('https://api.vercel.com/v9/projects', {
 			headers: {
-				Authorization: `Bearer ${process.env.VERCEL_TOKEN}`,
+				Authorization: `Bearer K5M4QOsuLzJRya2F8mPHJjn4`,
 			},
 			method: 'GET',
 		});
@@ -12,7 +12,7 @@ export async function GET() {
 
 		return NextResponse.json(
 			{
-				proyectos: data.projects,
+				data,
 			},
 			{ status: 200 }
 		);

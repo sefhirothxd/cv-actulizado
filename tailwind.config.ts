@@ -19,6 +19,7 @@ const config: Config = {
 				morado: '#8884FF',
 				amarrillo: '#FAD7A1',
 				rojoBlack: '#E96D71',
+				blancoPro: '#E2E8F0',
 			},
 			boxShadow: {
 				caja: '-4px 4px 14px rgba(0, 0, 0, 0.25)',

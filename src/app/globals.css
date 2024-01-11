@@ -5,23 +5,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--color-black: oklch(0 0 0);
+	--color-gray-950: oklch(0 0 20);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* body {
+	min-height: 100vh;
+	background: linear-gradient(-45deg, var(--color-black), var(--color-gray-950));
+	background-size: 500% 500%;
+	animation: bg 3s ease infinite;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-}
+@keyframes bg {
+	0%, 100% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+} */
+
+
 .text-desborde {
   overflow: hidden; 
 white-space: nowrap; 
 }
+
+
