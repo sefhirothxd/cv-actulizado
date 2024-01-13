@@ -16,9 +16,9 @@ export async function POST(request: Request) {
 	console.log(name, correo, message);
 
 	try {
-		const data = await resend.emails.send({
+		await resend.emails.send({
 			from: 'onboarding@resend.dev',
-			to: [correo],
+			to: ['bveracachay@gmail.com'],
 			subject: 'Nuevo mensaje de pagina personal',
 			react: EmailTemplate({ firstName: name, correo, message }),
 			text: '',
@@ -27,6 +27,7 @@ export async function POST(request: Request) {
 		return NextResponse.json(
 			{
 				message: 'Email sent',
+				status: 200
 			},
 			{ status: 200 }
 		);
@@ -34,6 +35,7 @@ export async function POST(request: Request) {
 		return NextResponse.json(
 			{
 				message: 'Error',
+				status: 500
 			},
 			{ status: 500 }
 		);

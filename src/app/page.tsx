@@ -3,6 +3,7 @@ import Presentacion from "../components/Presentacion";
 import Proyectos from "../components/Proyectos";
 import Contacto from "../components/Contacto";
 import Footer from "../components/Footer";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Proyectos />
       <Contacto />
       <Footer />
+      <ToastContainer />
     </main>
   );
 }
