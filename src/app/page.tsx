@@ -3,7 +3,12 @@ import Presentacion from "../components/Presentacion";
 import Proyectos from "../components/Proyectos";
 import Contacto from "../components/Contacto";
 import Footer from "../components/Footer";
-import { ToastContainer } from "react-toastify";
+import { Icons, ToastContainer } from "react-toastify";
+
+export const metadata = {
+  title: "Bryan vera",
+  description: "Desarrollador Full Stack",
+};
 
 export default function Home() {
   return (
