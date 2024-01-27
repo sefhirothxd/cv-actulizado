@@ -1,5 +1,6 @@
-"use client";
-import { useEffect, useState } from "react";
+// "use client";
+// import { useEffect, useState } from "react";
+import { GET } from "../app/api/proyects/route";
 
 type Proyects = {
   name: string;
@@ -16,23 +17,27 @@ type Proyects = {
     repo: string;
   };
 };
-
-const MasProyectos = () => {
-  const [proyectos, setProyectos] = useState<Proyects[]>([]);
-  const getProyect = async () => {
-    const res = await fetch("/api/proyects", {
-      method: "GET",
-    });
+const getProyect = async () => {
+  try {
+    const res = await GET();
+    if (!res.ok) {
+      throw new Error("Error al obtener los proyectos");
+    }
     const data = await res.json();
-    console.log(data);
-    const axu = data.data.projects;
-    console.log(axu);
-    setProyectos(axu);
-  };
+    const projects = data.data.projects;
+    return projects;
+  } catch (error) {
+    console.error("Error:", error);
+    return null;
+  }
+};
 
-  useEffect(() => {
-    getProyect();
-  }, []);
+const MasProyectos = async () => {
+  // const [proyectos, setProyectos] = useState<Proyects[]>([]);
+
+  // useEffect(() => {
+  //   getProyect();
+  // }, []);
   // const lessProjects = () => {
   // 	setProyectos(axu.slice(0, 6));
   // 	setMostrar(false);
@@ -41,6 +46,8 @@ const MasProyectos = () => {
   // 	setProyectos(axu);
   // 	setMostrar(true);
   // };
+
+  const proyectos = await getProyect();
 
   return (
     <div data-aos="fade-right" className="w-full">
